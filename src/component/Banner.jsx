@@ -1,12 +1,15 @@
 import bannerImage from "../assets/p2.png";
 import bannerBackground from "../assets/banner_wallpaper.svg";
 import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Banner = () => {
     const el = useRef(null);
+    useState(() => new Typed(el.current, getOptions()));
+    const linkedURL='https://www.linkedin.com/in/umesh-pawar-ba6893180'
+    const githubURL='https://github.com/upawar7038'
 
-    useEffect(() => {
+   useEffect(() => {
         const typed = new Typed(el.current, {
             strings: ["Android Developer", "Backend Developer"],
             startDelay: 100,
@@ -21,57 +24,59 @@ const Banner = () => {
         };
     }, []);
 
+
     return (
         <div
             style={{ backgroundImage: `url(${bannerBackground})`, backgroundSize: "cover" }}
             className="main-container flex items-center"
         >
             <div className="md:flex justify-start text-white">
-                <div className="md:w-2/3 text-center md:text-left">
+                <div className="  md:w-2/3 text-center md:text-left">
                     <h3 className=" ms-4 text-3xl font-semibold">Hi, I am</h3>
                     <h1 className=" ms-4 mt-3 text-5xl font-bold">Umesh Pawar</h1>
                     <h2 className=" ms-4 mt-3 text-3xl">I am <span className="font-bold underline" ref={el}></span></h2>
-                    <p className=" ms-4 mt-3 mr-10 text-start">
-                        A highly motivated and skilled Java developer with 2.5 years of experience in
-                        developing and maintaining complex applications using Java, Hibernate, and Spring Boot.
-                        Possessing excellent problem-solving skills, a strong work ethic, and a passion for technology.
-                        Seeking a challenging role in a dynamic organization where I can utilize my skills and experience
-                        to contribute to the success of the company.
-                    </p>
+                    <p className="ms-4  mt-3 ">
+                        <span className=" mt-3  text-2xl text-start">
+                            Highly skilled and results-oriented software developer with 2.6 years of experience in
+                            Android and Java development. Proven track record of designing and implementing
+                            complex mobile applications and backend systems using Java, Android SDK, Kotlin, Hibernate, and Spring Boot.
+                        </span>
+                        <br />
+                        <span className=" mt-3 text-2xl text-start">
+                            Strong problem-solving abilities, attention to detail, and a passion for delivering high-quality software solutions.
+                            Seeking opportunities to leverage my expertise and contribute to innovative projects in a dynamic team environment.
+                        </span>
+                        ̥</p>
+
                     <div className="ms-4 icons-container flex space-x-5 rounded-full mt-5">
                         <a
                             className="hover:bg-orange-500 border px-3 py-4 w-16 h-16 cursor-pointer flex justify-center items-center bg-gray-800 rounded-full"
-                            href="#"
-                        >
-                            <i className="fab fa-facebook text-4xl"></i>
-                        </a>
-                        <a
-                            className="hover:bg-orange-500 border px-3 py-4 w-16 h-16 cursor-pointer flex justify-center items-center bg-gray-800 rounded-full"
-                            href="#"
-                        >
-                            <i className="fab fa-instagram text-4xl"></i>
-                        </a>
-                        <a
-                            className="hover:bg-orange-500 border px-3 py-4 w-16 h-16 cursor-pointer flex justify-center items-center bg-gray-800 rounded-full"
-                            href="#"
+                            href={linkedURL}
                         >
                             <i className="fab fa-linkedin text-4xl"></i>
                         </a>
-                    </div>
-                    <br/>
-                    <div className="ms-4 flex-shrink-0">
                         <a
-                            className="px-2 py-2 bg-blue-700 rounded-full shadow-lg text-2xl font-semibold mt-5 md:mt-0 md:mr-4"
-                            href="/contact"
+                            className="hover:bg-orange-500 border px-3 py-4 w-16 h-16 cursor-pointer flex justify-center items-center bg-gray-800 rounded-full"
+                            href={githubURL}
+                        >
+                          <i class="fa-brands fa-github"></i>
+                        </a>
+                        
+                    </div>
+                    <br />
+                    <div className="ms-4 flex-shrink-0">
+                        <button
+                            onClick={redirectToGmail}
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                         >
                             Contact me
-                        </a>
-                        <a
-                            className="px-2 py-2 bg-blue-700 rounded-full shadow-lg text-2xl font-semibold mt-5 md:mt-0 md:ms-4"
-                            href="/contact"
+                        </button>
+                        <button onClick={redirectToGmail}
+                            className="ms-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                         >
                             Hire Me
-                        </a>
+                        </button>
+                         
                     </div>L̥
 
 

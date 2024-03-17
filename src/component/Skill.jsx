@@ -2,11 +2,12 @@ import React from 'react';
 
 const skills = [
   { category: 'Programming Languages', skills: ['Java', 'Kotlin'] },
-  { category: 'Android Development', skills: ['Android Studio', 'XML', 'Material Design'] },
-  { category: 'Backend Development', skills: ['Spring Boot', 'RESTful APIs', 'SQL',] },
-  { category: 'Version Control', skills: ['Git', 'GitHub'] },
-  { category: 'Tools & Technologies', skills: ['Firebase', 'Google Play Services', 'Retrofit', 'Dagger 2','Postamn'] },
-  // Add more categories and skills as needed
+  { category: 'Frameworks', skills: ['Android SDK','Bluetooth SDK','Spring Boot', 'Hibernate'] },
+  { category: 'Payment Gateway Intergration', skills: ['Payu', 'Razorpay','Sabpaisa','1Pay','Payphi'] },
+  { category: 'Database Management', skills: ['MySQL', 'Room Database','Sqlite Database'] },
+  { category: 'Version Control & Design Pattern', skills: ['Git', 'GitHub','MVC', 'DAO','MVVMx'] },
+  { category: 'Tools & Technologies', skills: ['Android Studio', 'IntelliJ IDEA','Postman','Visual Studio','Firebase', 'Retrofit','RESTful Web Services','JPA', 'Dagger 2'] },
+ 
 ];
 
 const SkillCard = ({ category, skills }) => (
