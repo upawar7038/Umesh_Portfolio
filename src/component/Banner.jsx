@@ -5,11 +5,19 @@ import { useEffect, useRef, useState } from "react";
 
 const Banner = () => {
     const el = useRef(null);
-    useState(() => new Typed(el.current, getOptions()));
+    
     const linkedURL='https://www.linkedin.com/in/umesh-pawar-ba6893180'
     const githubURL='https://github.com/upawar7038'
 
-   useEffect(() => {
+    const redirectToGmail = () => {
+        const recipient = 'upawar7038@gmail.com'; // Replace with your Gmail ID
+        const subject = ''; // Optional: Replace with your desired subject
+        const body = ''; // Optional: Replace with your desired email body
+        const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+    };
+
+    useEffect(() => {
         const typed = new Typed(el.current, {
             strings: ["Android Developer", "Backend Developer"],
             startDelay: 100,
