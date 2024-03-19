@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 
 const Banner = () => {
     const el = useRef(null);
-    
-    const linkedURL='https://www.linkedin.com/in/umesh-pawar-ba6893180'
-    const githubURL='https://github.com/upawar7038'
+
+    const linkedURL = 'https://www.linkedin.com/in/umesh-pawar-ba6893180'
+    const githubURL = 'https://github.com/upawar7038'
 
     const redirectToGmail = () => {
         const recipient = 'upawar7038@gmail.com'; // Replace with your Gmail ID
@@ -23,7 +23,8 @@ const Banner = () => {
             startDelay: 100,
             typeSpeed: 50,
             backSpeed: 50,
-            backDelay: 50
+            backDelay: 50,
+            loop: true
         });
 
         // Destroying Typed instance on component unmount
@@ -43,18 +44,18 @@ const Banner = () => {
                     <h3 className=" ms-4 text-3xl font-semibold">Hi, I am</h3>
                     <h1 className=" ms-4 mt-3 text-5xl font-bold">Umesh Pawar</h1>
                     <h2 className=" ms-4 mt-3 text-3xl">I am <span className="font-bold underline" ref={el}></span></h2>
-                    <p className="ms-4  mt-3 ">
-                        <span className=" mt-3  text-2xl text-start">
+                    <p className="ms-2  mt-3 text-start ">
+                        <span className=" mt-3">
                             Highly skilled and results-oriented software developer with 2.6 years of experience in
                             Android and Java development. Proven track record of designing and implementing
                             complex mobile applications and backend systems using Java, Android SDK, Kotlin, Hibernate, and Spring Boot.
                         </span>
                         <br />
-                        <span className=" mt-3 text-2xl text-start">
+                        <span className=" mt-3 ">
                             Strong problem-solving abilities, attention to detail, and a passion for delivering high-quality software solutions.
                             Seeking opportunities to leverage my expertise and contribute to innovative projects in a dynamic team environment.
                         </span>
-                        ̥</p>
+                    </p>
 
                     <div className="ms-4 icons-container flex space-x-5 rounded-full mt-5">
                         <a
@@ -67,9 +68,9 @@ const Banner = () => {
                             className="hover:bg-orange-500 border px-3 py-4 w-16 h-16 cursor-pointer flex justify-center items-center bg-gray-800 rounded-full"
                             href={githubURL}
                         >
-                          <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-github"></i>
                         </a>
-                        
+
                     </div>
                     <br />
                     <div className="ms-4 flex-shrink-0">
@@ -84,8 +85,8 @@ const Banner = () => {
                         >
                             Hire Me
                         </button>
-                         
-                    </div>L̥
+
+                    </div>
 
 
                 </div>

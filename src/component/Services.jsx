@@ -1,54 +1,85 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
-const Services=()=>{
-    useState(
-        [
-            {
-            id:1,
-            title:'Java Development',
-            description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eaque, incidunt dignissimos temporibus quos repudiandae eveniet. Tenetur doloribus autem eaque, animi doloremque alias! Modi dolor laboriosam enim fugiat? Libero, vel.</span><span>Recusandae fugiat quidem nulla distinctio consequatur inventore repellendus cupiditate atque suscipit blanditiis, excepturi soluta. Consequatur, sunt harum? Minus ut dicta omnis, libero ratione facere tempora saepe laboriosam, officiis possimus vero.</span><span>Eligendi, et doloremque molestias rerum itaque nisi consequatur eos ut, sunt doloribus in mollitia sapiente maiores aliquam quas ipsam maxime sequi consectetur quo ab magni pariatur laboriosam fuga? Sapiente, animi.</span><span>Animi corrupti culpa exercitationem quasi corporis, aut itaque ipsam quod voluptates voluptatem dicta eum temporibus cupiditate quam non sunt tempore porro assumenda nostrum debitis! Enim quasi aspernatur aliquid maiores illo?</span><span>Hic ab laudantium ratione voluptas architecto modi quisquam cumque officiis perferendis illum dignissimos quod est magni accusamus nostrum, facere eligendi non ut quia veritatis nihil saepe placeat eveniet nam. Illum.</span><span>Similique repellendus dolore, sunt temporibus provident id cupiditate vitae officiis quisquam, sequi alias! Quibusdam aspernatur, possimus illo sit itaque, minima consequuntur assumenda numquam, odio deleniti alias perferendis voluptatum quas officia.</span><span>Amet ipsam corrupti asperiores ipsa. Sunt commodi dolores eos? Voluptatibus recusandae nihil nulla dolore? Minima assumenda obcaecati earum magni itaque ea id similique, tenetur ullam laborum, esse iusto praesentium voluptas?</span><span>Iusto aliquid, nobis nam sit quia sunt, dolorum accusamus officiis magni molestiae qui, nostrum error maxime quis atque cum optio consequatur cupiditate amet ab quisquam quasi animi rem. Delectus, beatae?</span><span>Maiores blanditiis quibusdam ut dicta nemo aperiam, similique optio dolor quisquam necessitatibus provident maxime quia voluptates aspernatur modi ipsum voluptatum voluptas officia id vel, exercitationem dignissimos! Voluptatem ipsam impedit quos?</span><span>Accusantium atque maiores obcaecati sequi sint aliquid animi dolore veritatis, pariatur dolor quasi nihil tenetur placeat itaque similique, unde ipsa porro nesciunt, minima optio perferendis tempora. Neque praesentium ullam laudantium!</span></p>`
-        },
-        {
-            id:2,
-            title:'Android Development',
-            description:`Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eaque, incidunt dignissimos temporibus quos repudiandae eveniet. Tenetur doloribus autem eaque, animi doloremque alias! Modi dolor laboriosam enim fugiat? Libero, vel.</span><span>Recusandae fugiat quidem nulla distinctio consequatur inventore repellendus cupiditate atque suscipit blanditiis, excepturi soluta. Consequatur, sunt harum? Minus ut dicta omnis, libero ratione facere tempora saepe laboriosam, officiis possimus vero.</span><span>Eligendi, et doloremque molestias rerum itaque nisi consequatur eos ut, sunt doloribus in mollitia sapiente maiores aliquam quas ipsam maxime sequi consectetur quo ab magni pariatur laboriosam fuga? Sapiente, animi.</span><span>Animi corrupti culpa exercitationem quasi corporis, aut itaque ipsam quod voluptates voluptatem dicta eum temporibus cupiditate quam non sunt tempore porro assumenda nostrum debitis! Enim quasi aspernatur aliquid maiores illo?</span><span>Hic ab laudantium ratione voluptas architecto modi quisquam cumque officiis perferendis illum dignissimos quod est magni accusamus nostrum, facere eligendi non ut quia veritatis nihil saepe placeat eveniet nam. Illum.</span><span>Similique repellendus dolore, sunt temporibus provident id cupiditate vitae officiis quisquam, sequi alias! Quibusdam aspernatur, possimus illo sit itaque, minima consequuntur assumenda numquam, odio deleniti alias perferendis voluptatum quas officia.</span><span>Amet ipsam corrupti asperiores ipsa. Sunt commodi dolores eos? Voluptatibus recusandae nihil nulla dolore? Minima assumenda obcaecati earum magni itaque ea id similique, tenetur ullam laborum, esse iusto praesentium voluptas?</span><span>Iusto aliquid, nobis nam sit quia sunt, dolorum accusamus officiis magni molestiae qui, nostrum error maxime quis atque cum optio consequatur cupiditate amet ab quisquam quasi animi rem. Delectus, beatae?</span><span>Maiores blanditiis quibusdam ut dicta nemo aperiam, similique optio dolor quisquam necessitatibus provident maxime quia voluptates aspernatur modi ipsum voluptatum voluptas officia id vel, exercitationem dignissimos! Voluptatem ipsam impedit quos?</span><span>Accusantium atque maiores obcaecati sequi sint aliquid animi dolore veritatis, pariatur dolor quasi nihil tenetur placeat itaque similique, unde ipsa porro nesciunt, minima optio perferendis tempora. Neque praesentium ullam laudantium!</span></p>`
-        }
-          
+const Services = () => {
+  const [isJavaDetailsOpen, setIsJavaDetailsOpen] = useState(true);
+  const [isAndroidDetailsOpen, setIsAndroidDetailsOpen] = useState(true);
 
-        ]
-    )
-  return(
+  const toggleJavaDetails = () => {
+    setIsJavaDetailsOpen(!isJavaDetailsOpen);
+  };
 
-    <>
-    <div className="main-container py-16">
-        <h1 className=" text-5xl font-bold text-center underline">My Services</h1>
-        <div className="services-container overflow-x-scroll space-x-5 px-8 flex mt-12 ">
-            <div className="Service-java cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-center shadow-lg rounded-xl space-y-5">
-            <i class="fa-brands text-5xl fa-java"></i>
-                <h1 className="text-4xl  text-center font-bold">Backend Development</h1>
-                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eaque, incidunt dignissimos temporibus quos repudiandae eveniet. Tenetur doloribus autem eaque, animi doloremque alias! Modi dolor laboriosam enim fugiat? Libero, vel.</span><span>Recusandae fugiat quidem nulla distinctio consequatur inventore repellendus cupiditate atque suscipit blanditiis, excepturi soluta. Consequatur, sunt harum? Minus ut dicta omnis, libero ratione facere tempora saepe laboriosam, officiis possimus vero.</span><span>Eligendi, et doloremque molestias rerum itaque nisi consequatur eos ut, sunt doloribus in mollitia sapiente maiores aliquam quas ipsam maxime sequi consectetur quo ab magni pariatur laboriosam fuga? Sapiente, animi.</span><span>Animi corrupti culpa exercitationem quasi corporis, aut itaque ipsam quod voluptates voluptatem dicta eum temporibus cupiditate quam non sunt tempore porro assumenda nostrum debitis! Enim quasi aspernatur aliquid maiores illo?</span><span>Hic ab laudantium ratione voluptas architecto modi quisquam cumque officiis perferendis illum dignissimos quod est magni accusamus nostrum, facere eligendi non ut quia veritatis nihil saepe placeat eveniet nam. Illum.</span><span>Similique repellendus dolore, sunt temporibus provident id cupiditate vitae officiis quisquam, sequi alias! Quibusdam aspernatur, possimus illo sit itaque, minima consequuntur assumenda numquam, odio deleniti alias perferendis voluptatum quas officia.</span><span>Amet ipsam corrupti asperiores ipsa. Sunt commodi dolores eos? Voluptatibus recusandae nihil nulla dolore? Minima assumenda obcaecati earum magni itaque ea id similique, tenetur ullam laborum, esse iusto praesentium voluptas?</span><span>Iusto aliquid, nobis nam sit quia sunt, dolorum accusamus officiis magni molestiae qui, nostrum error maxime quis atque cum optio consequatur cupiditate amet ab quisquam quasi animi rem. Delectus, beatae?</span><span>Maiores blanditiis quibusdam ut dicta nemo aperiam, similique optio dolor quisquam necessitatibus provident maxime quia voluptates aspernatur modi ipsum voluptatum voluptas officia id vel, exercitationem dignissimos! Voluptatem ipsam impedit quos?</span><span>Accusantium atque maiores obcaecati sequi sint aliquid animi dolore veritatis, pariatur dolor quasi nihil tenetur placeat itaque similique, unde ipsa porro nesciunt, minima optio perferendis tempora. Neque praesentium ullam laudantium!</span></p>
-                <button className="px-3 py-3 text-white font-mono bg-blue-500 rounded-full shadow-lg">Check</button>
-            </div>
-            <div className="services-Android  cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-center shadow-lg rounded-xl space-y-5">
-            <i class="fa-solid text-5xl fa-mobile-screen-button"></i>
-            <h1 className="text-4xl  text-center font-bold">Android Development</h1>
-                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eaque, incidunt dignissimos temporibus quos repudiandae eveniet. Tenetur doloribus autem eaque, animi doloremque alias! Modi dolor laboriosam enim fugiat? Libero, vel.</span><span>Recusandae fugiat quidem nulla distinctio consequatur inventore repellendus cupiditate atque suscipit blanditiis, excepturi soluta. Consequatur, sunt harum? Minus ut dicta omnis, libero ratione facere tempora saepe laboriosam, officiis possimus vero.</span><span>Eligendi, et doloremque molestias rerum itaque nisi consequatur eos ut, sunt doloribus in mollitia sapiente maiores aliquam quas ipsam maxime sequi consectetur quo ab magni pariatur laboriosam fuga? Sapiente, animi.</span><span>Animi corrupti culpa exercitationem quasi corporis, aut itaque ipsam quod voluptates voluptatem dicta eum temporibus cupiditate quam non sunt tempore porro assumenda nostrum debitis! Enim quasi aspernatur aliquid maiores illo?</span><span>Hic ab laudantium ratione voluptas architecto modi quisquam cumque officiis perferendis illum dignissimos quod est magni accusamus nostrum, facere eligendi non ut quia veritatis nihil saepe placeat eveniet nam. Illum.</span><span>Similique repellendus dolore, sunt temporibus provident id cupiditate vitae officiis quisquam, sequi alias! Quibusdam aspernatur, possimus illo sit itaque, minima consequuntur assumenda numquam, odio deleniti alias perferendis voluptatum quas officia.</span><span>Amet ipsam corrupti asperiores ipsa. Sunt commodi dolores eos? Voluptatibus recusandae nihil nulla dolore? Minima assumenda obcaecati earum magni itaque ea id similique, tenetur ullam laborum, esse iusto praesentium voluptas?</span><span>Iusto aliquid, nobis nam sit quia sunt, dolorum accusamus officiis magni molestiae qui, nostrum error maxime quis atque cum optio consequatur cupiditate amet ab quisquam quasi animi rem. Delectus, beatae?</span><span>Maiores blanditiis quibusdam ut dicta nemo aperiam, similique optio dolor quisquam necessitatibus provident maxime quia voluptates aspernatur modi ipsum voluptatum voluptas officia id vel, exercitationem dignissimos! Voluptatem ipsam impedit quos?</span><span>Accusantium atque maiores obcaecati sequi sint aliquid animi dolore veritatis, pariatur dolor quasi nihil tenetur placeat itaque similique, unde ipsa porro nesciunt, minima optio perferendis tempora. Neque praesentium ullam laudantium!</span></p>
-                <button className="px-3 py-3 text-white font-mono bg-blue-500 rounded-full shadow-lg">Check</button>
-            
-            </div>
+  const toggleAndroidDetails = () => {
+    setIsAndroidDetailsOpen(!isAndroidDetailsOpen);
+  };
 
+  const skills = [
+    { category: 'Custom Java Application Development:', skills: ['Development of custom Java applications based on client requirements.', 'Utilization of Java programming language, along with frameworks like Spring Boot or Hibernate, for efficient and scalable solutions.', 'Implementation of best coding practices and design patterns to ensure code quality and maintainability'] },
+    { category: 'API Development and Integration:', skills: ['Development of RESTful APIs using Java frameworks like Spring REST', 'Integration of APIs for communication between different systems or services.', 'Documentation and testing of APIs using tools like Swagger or Postman for reliability and compatibility.'] },
+    { category: 'Maintenance and Support:', skills: ['Providing ongoing maintenance and support for Java applications, including bug fixes and performance enhancements.', 'Monitoring application performance and troubleshooting issues to ensure uninterrupted operation.', 'Version control and deployment management for seamless updates and releases.'] },
+    { category: 'Code Reviews:', skills: ['Conducting code reviews to improve code quality, readability, and adherence to coding standards.', 'Refactoring existing codebases to enhance scalability, efficiency, and maintainability.', 'Implementing coding best practices and patterns for optimized and robust solutions.'] }
+  ];
 
-        </div>
+  const skillAndroid = [
+    { categoryAndroid: 'Custom Android App Development:', skillsAndroid: ['Development of custom Android applications tailored to client specifications.', 'Proficiency in Java/Kotlin programming languages for Android app development.', 'UI/UX design implementation for intuitive and visually appealing user interfaces.'] },
+    { categoryAndroid: 'Native Android Development:', skillsAndroid: ['Utilization of Android Studio and Android SDK for native app development.', 'Integration of Android-specific features such as notifications, permissions, and background tasks.', ' Optimization of app performance and battery efficiency for a seamless user experience.'] },
+    { categoryAndroid: 'Cross-Platform Development:', skillsAndroid: ['Experience with cross-platform frameworks like React Native or Flutter for multi-platform app development.', 'Building and deploying apps for both Android and iOS platforms from a single codebase.'] },
+    { categoryAndroid: 'API Integration:', skillsAndroid: ['Integration of RESTful APIs for data exchange and communication with server-side applications.', 'Authentication, data encryption, and secure API handling for data privacy and security.', 'Utilization of libraries like Retrofit for efficient network requests and responses.'] },
+    { categoryAndroid: 'Database Management:', skillsAndroid: ['Implementation of local and remote databases using SQLite, Room Database.', 'Efficient data storage, retrieval, and synchronization for offline capabilities and data persistence.', 'Database schema design and optimization for improved app performance.'] }
+  ];
 
-
-
-
+  const SkillCardAndroid = ({ category, skill }) => (
+    <div className="bg-slate-100 shadow-md hover:bg-slate-200 rounded p-4 m-2">
+      <h3 className="text-xl font-semibold">{category}</h3>
+      <ul className="list-disc pl-6">
+        {skill.map((skills, index) => (
+          <li key={index} className="text-gray-600 text-start">{skills}</li>
+        ))}
+      </ul>
     </div>
-    
-    </>
-
   );
 
+  const SkillCard = ({ category, skills }) => (
+    <div className="bg-slate-100 shadow-md hover:bg-slate-200 rounded p-4 m-2">
+      <h3 className="text-xl font-semibold">{category}</h3>
+      <ul className="list-disc pl-6">
+        {skills.map((skill, index) => (
+          <li key={index} className="text-gray-600 text-start">{skill}</li>
+        ))}
+      </ul>
+    </div>
+  );
 
+  return (
+    <div className="main-container py-16">
+      <h1 className="text-5xl font-bold text-center underline">My Services</h1>
+      <div className="services-container flex justify-center overflow-x-scroll space-x-5 px-8  mt-12">
+        <div className="Service-java cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-center shadow-lg rounded-xl space-y-5">
+          <i className="fa-brands text-5xl fa-java"></i>
+          <h1 className="text-4xl text-center font-bold">Backend Development</h1>
+
+          <details open={isJavaDetailsOpen} className="services-Android cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-start shadow-lg rounded-xl space-y-5">
+            <div className="grid grid-cols-1 text-start md:grid-cols-1 lg:grid-cols-1 gap-4">
+              {skills.map((item, index) => (
+                <SkillCard key={index} category={item.category} skills={item.skills} />
+              ))}
+            </div>
+          </details>
+        </div>
+        <div className="services-Android cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-center shadow-lg rounded-xl space-y-5">
+          <i className="fa-solid text-5xl fa-mobile-screen-button"></i>
+          <h1 className="text-4xl text-center font-bold">Android Development</h1>
+
+          <details open={isAndroidDetailsOpen} className="services-Android cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-start shadow-lg rounded-xl space-y-5">
+            <div className="grid grid-cols-1 text-start md:grid-cols-1 lg:grid-cols-1 gap-4">
+              {skillAndroid.map((item, index) => (
+                <SkillCardAndroid key={index} category={item.categoryAndroid} skill={item.skillsAndroid} />
+              ))}
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  );
 };
- export default Services;
+
+export default Services;
