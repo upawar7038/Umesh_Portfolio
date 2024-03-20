@@ -40,11 +40,11 @@ const Banner = () => {
             className="main-container flex items-center"
         >
             <div className="md:flex justify-start text-white">
-                <div className="  md:w-2/3 text-center md:text-left">
-                    <h3 className=" ms-4 text-3xl font-semibold">Hi, I am</h3>
-                    <h1 className=" ms-4 mt-3 text-5xl font-bold">Umesh Pawar</h1>
-                    <h2 className=" ms-4 mt-3 text-3xl">I am <span className="font-bold underline" ref={el}></span></h2>
-                    <p className="ms-2  mt-3 text-start ">
+                <div className="  md:w-2/3 sm:w-1/3 center md:text-left">
+                    <h3 className=" ms-4 lg:text-5xl sm:text-3xl-mt-2 font-semibold">Hi, I am</h3>
+                    <h1 className=" ms-4 lg:text-5xl sm:text-3xl-mt-2 font-bold">Umesh Pawar</h1>
+                    <h2 className=" ms-4 lg:text-3xl sm:text-2xl-mt-2">I am <span className="font-bold underline" ref={el}></span></h2>
+                    <p className="ms-2 mt-4 text-start lg:text-xl sm:text-sm">
                         <span className=" mt-3">
                             Highly skilled and results-oriented software developer with 2.6 years of experience in
                             Android and Java development. Proven track record of designing and implementing
@@ -91,7 +91,7 @@ const Banner = () => {
 
                 </div>
             </div>
-            <div className="md:flex justify-center mt-5 md:mt-0">
+            <div className="md:flex justify-center sm: flex-justify-start mt-5 md:mt-0">
                 <img className="rounded-full shadow-lg" src={bannerImage} alt="Umesh Pawar" />
             </div>
         </div>

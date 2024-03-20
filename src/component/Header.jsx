@@ -5,46 +5,46 @@ import Services from './Services';
 
 import { Transition } from "@headlessui/react";
 const Header = () => {
-    const [userName, setUserName] = useState("Umesh Ramchandra Pawar")
-    const [menuLinks, setLinks] = useState(
-        [
-            {
-                title: "Home",
-                link: "/Home",
-                id: 1
-            },
-            {
-                title: "About",
-                link: "/About",
-                id: 2
-            },
-            {
-                title: "Skill",
-                link: "/Skill",
-                id: 3
-            },
-            {
-                title: "Portfolio",
-                link: "/portfolio",
-                id: 4
-            },
-            {
-                title: "Contact",
-                link: "/contact",
-                id: 5
-            }
-        ]
-    )
+  const [userName, setUserName] = useState("Umesh Ramchandra Pawar")
+  const [menuLinks, setLinks] = useState(
+    [
+      {
+        title: "Home",
+        link: "/Home",
+        id: 1
+      },
+      {
+        title: "About",
+        link: "/About",
+        id: 2
+      },
+      {
+        title: "Services",
+        link: "/Services",
+        id: 3
+      },
+      {
+        title: "Skills",
+        link: "/Skills",
+        id: 4
+      },
+      {
+        title: "Contact",
+        link: "/contact",
+        id: 5
+      }
+    ]
+  )
 
-   const[hireButton,setHireButton]= useState(
-        {
-            title: "HireMe",
-            link: "/hireMe",
-            id: 1  
-        }
-    )
-    
- const [isOpen, setIsOpen] = useState(false);
+  const [hireButton, setHireButton] = useState(
+    {
+      title: "HireMe",
+      link: "/hireMe",
+      id: 1
+    }
+  )
+
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <nav className="bg-gray-300">
@@ -52,16 +52,16 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex justify-items-start">
-              <h1 className="text-ellipsis max-w-md mx-auto 2xl: font-bold">{userName}</h1>
+                <h1 className="text-ellipsis max-w-md mx-auto 2xl: font-bold">{userName}</h1>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                {menuLinks.map(
+                   {menuLinks.map(
                     (link) => (
-                        <a key={link.id }href={link.link} className="hover:text-orange-600">
-                            {link.title}</a>
+                      <a key={link.id} href={link.link} className="hover:text-orange-600">
+                        {link.title}</a>
                     )
-                )}
+                  )}
                 </div>
               </div>
             </div>
@@ -124,21 +124,21 @@ const Header = () => {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                
+
                 {menuLinks.map(
-                    (link) => (
-                        <a key={link.id }href={link.link} className="text-black block px-3 py-2 rounded-md text-base font-medium hover:text-orange-600">
-                            {link.title}</a>
-                    )
+                  (link) => (
+                    <a key={link.id} href={link.link} className="text-black block px-3 py-2 rounded-md text-base font-medium hover:text-orange-600">
+                      {link.title}</a>
+                  )
                 )}
-                
+
               </div>
             </div>
           )}
         </Transition>
       </nav>
 
-     </div>
+    </div>
   );
 
 };

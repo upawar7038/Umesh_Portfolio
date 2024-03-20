@@ -14,7 +14,7 @@ const AboutMe = () => {
     return (
         <>
             <div className="main-container bg-white">
-            <h1 className=" text-center py-16 text-4xl font-bold underline">About Me </h1>
+            <h1 className="lg:text-5xl sm:text-3xl text-center py-16 font-bold underline">About Me </h1>
               <div className=" bg-gray-100">
                     <div className="main-box flex items-center">
                         <div className="imageclass mt-10 w-full h-full">
@@ -22,8 +22,8 @@ const AboutMe = () => {
                         </div>
                         <div className="textmain flex justify-center">
                             <div className=" space-y-5  w-2/3">
-                            <h1 className=" text-4xl font-semibold mt-5">{data.title}</h1>
-                            <p>
+                            <h1 className="lg:text-4xl sm:text-2xl break-words font-semibold mt-5">{data.title}</h1>
+                            <p className=" break-words">
                                 {data.desc1}
                             </p>
                             </div>

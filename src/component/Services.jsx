@@ -29,7 +29,7 @@ const Services = () => {
 
   const SkillCardAndroid = ({ category, skill }) => (
     <div className="bg-slate-100 shadow-md hover:bg-slate-200 rounded p-4 m-2">
-      <h3 className="text-xl font-semibold">{category}</h3>
+      <h3 className="lg:text-xl sm:text-sm font-semibold">{category}</h3>
       <ul className="list-disc pl-6">
         {skill.map((skills, index) => (
           <li key={index} className="text-gray-600 text-start">{skills}</li>
@@ -40,7 +40,7 @@ const Services = () => {
 
   const SkillCard = ({ category, skills }) => (
     <div className="bg-slate-100 shadow-md hover:bg-slate-200 rounded p-4 m-2">
-      <h3 className="text-xl font-semibold">{category}</h3>
+      <h3 className="lg:text-xl sm:text-sm font-semibold">{category}</h3>
       <ul className="list-disc pl-6">
         {skills.map((skill, index) => (
           <li key={index} className="text-gray-600 text-start">{skill}</li>
@@ -51,26 +51,26 @@ const Services = () => {
 
   return (
     <div className="main-container py-16">
-      <h1 className="text-5xl font-bold text-center underline">My Services</h1>
-      <div className="services-container flex justify-center overflow-x-scroll space-x-5 px-8  mt-12">
+      <h1 className="lg:text-5xl sm:text-3xl font-bold text-center underline">My Services</h1>
+      <div className="services-container break-words flex justify-center overflow-x-scroll space-x-5 px-8  mt-12">
         <div className="Service-java cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-center shadow-lg rounded-xl space-y-5">
           <i className="fa-brands text-5xl fa-java"></i>
-          <h1 className="text-4xl text-center font-bold">Backend Development</h1>
+          <h1 className=" lg:text-4xl sm:text-2xl sm:text- text-center font-bold">Backend Development</h1>
 
           <details open={isJavaDetailsOpen} className="services-Android cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-start shadow-lg rounded-xl space-y-5">
-            <div className="grid grid-cols-1 text-start md:grid-cols-1 lg:grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 text-start lg:text-xl sm:text-sm md:grid-cols-1 lg:grid-cols-1 gap-4">
               {skills.map((item, index) => (
                 <SkillCard key={index} category={item.category} skills={item.skills} />
               ))}
             </div>
           </details>
         </div>
-        <div className="services-Android cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-center shadow-lg rounded-xl space-y-5">
+        <div className="services-Android break-words cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-center shadow-lg rounded-xl space-y-5">
           <i className="fa-solid text-5xl fa-mobile-screen-button"></i>
-          <h1 className="text-4xl text-center font-bold">Android Development</h1>
+          <h1 className="lg:text-4xl sm:text-2xl text-center font-bold">Android Development</h1>
 
-          <details open={isAndroidDetailsOpen} className="services-Android cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-start shadow-lg rounded-xl space-y-5">
-            <div className="grid grid-cols-1 text-start md:grid-cols-1 lg:grid-cols-1 gap-4">
+          <details open={isAndroidDetailsOpen} className="services-Android cursor-pointer hover:bg-slate-200 bg-slate-100 p-5 text-start shadow-lg lg:rounded-xl sm:rounded-sm ">
+            <div className="text-start grid grid-cols-1  lg:text-xl sm:text-sm md:grid-cols-1 lg:grid-cols-1 gap-4">
               {skillAndroid.map((item, index) => (
                 <SkillCardAndroid key={index} category={item.categoryAndroid} skill={item.skillsAndroid} />
               ))}

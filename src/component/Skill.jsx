@@ -12,10 +12,10 @@ const skills = [
 
 const SkillCard = ({ category, skills }) => (
   <div className="bg-slate-100 shadow-md hover:bg-slate-200 rounded p-4 m-2">
-    <h3 className="text-xl font-semibold">{category}</h3>
+    <h3 className="lg:text-3xl sm:text-2xl font-semibold">{category}</h3>
     <ul className="list-disc pl-6">
       {skills.map((skill, index) => (
-        <li key={index} className="text-gray-600">{skill}</li>
+        <li key={index} className="text-gray-600 lg:text-2xl sm:text-1xl">{skill}</li>
       ))}
     </ul>
   </div>
@@ -24,7 +24,7 @@ const SkillCard = ({ category, skills }) => (
 const Skill = () => (
   <section id="skills" className="p-3 bg-white">
     <div>
-      <h1 className="text-5xl font-bold text-center underline">Skills</h1>
+      <h1 className="lg:text-5xl sm:text-3xl font-bold text-center underline">Skills</h1>
       <div className="container px-8 mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((item, index) => (
